@@ -1,0 +1,36 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+ul li{
+    display:flex;
+    max-width: 400px;
+    justify-content:space-between;
+    text-decoration: none;
+    
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration:none;
+    transition: ease 1s;
+}
+a:hover{
+    color:red;
+   
+}
+
