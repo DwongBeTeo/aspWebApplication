@@ -1,0 +1,2 @@
+D:\ASP_net\Lesson3\bai3.1\obj\Debug\bai3.1.csproj.AssemblyReference.cache
+D:\ASP_net\Lesson3\bai3.1\obj\Debug\bai3.1.csproj.CoreCompileInputs.cache

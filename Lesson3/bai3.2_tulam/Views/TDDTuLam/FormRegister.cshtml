@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "FormRegister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Don vi tuyen</h2>
+@{
+    Html.BeginForm("Register", "TDDTuLam", FormMethod.Get);
+    <table class ="table table-bordered">
+        <tr>
+            <td>@Html.Label("tên đợn vị tuyển")</td>
+            <td>@Html.TextBox("txtTDVT")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("loại hình doanh nghiệp")</td>
+            <td>@Html.DropDownList("txtLHDN", new SelectList(ViewBag.listLHDN, "ID", "Name")) </td>
+        </tr>
+        <tr>
+            <td>@Html.Label("số lượng nhân viên")</td>
+            <td>@Html.TextBox("txtSLNV")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Địa chỉ")</td>
+            <td>@Html.TextArea("txtDC")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Người liên hệ")</td>
+            <td>@Html.TextBox("txtNLH")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("số fax")</td>
+            <td>@Html.TextBox("txtSF")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("số điện thoại")</td>
+            <td>@Html.TextBox("txtSDT")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("email")</td>
+            <td>@Html.TextBox("txtEmail")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("địa chỉ website")</td>
+            <td>@Html.TextBox("txtDCWS")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("tên đăng nhập")</td>
+            <td>@Html.TextBox("txtTDN")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Mật khẩu")</td>
+            <td>@Html.Password("txtMK")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Nhập lại mật khẩu")</td>
+            <td>@Html.Password("txtXNMK")</td>
+        </tr>
+        
+        <tr>
+            <td>@Html.Label("Nhận thư điện tử")</td>
+            <td>
+                @Html.RadioButton("txtNTDT", "Nhận", true) nhận @Html.RadioButton("txtNTDT", "Không nhận") Không nhận
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="cập nhập" /> </td>
+            <td><input type="submit" value="hủy bỏ" /> </td>
+        </tr>
+        </table>
+        Html.EndForm();
+}
+

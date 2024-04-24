@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "MultiplicationTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Dictionary<int, List<int>>
+
+<h2>Multiplication Table from 2 to 9</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th></th>
+            @for (int i = 1; i <= 10; i++)
+            {
+                <th>@i</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kvp in Model)
+        {
+            <tr>
+                <td>@kvp.Key</td>
+                @foreach (var value in kvp.Value)
+                {
+                    <td>@value</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
