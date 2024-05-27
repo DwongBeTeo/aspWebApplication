@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DemoTheoVideo6.Models.TddSong>
+
+@{
+    ViewBag.Title = "TDD: Danh sách  bài hát";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TDD: Danh sách  bài hát</h2>
+
+<p>
+    @Html.ActionLink("Create New", "TddCreate")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TddTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddArtist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddYearRelaese)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddArtist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddYearRelaese)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
