@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Tdd_baithigiuaky.Models.TddCustomer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "TddCreate")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TddFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddGender)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddGender)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TddId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TddId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TddId })
+        </td>
+    </tr>
+}
+
+</table>

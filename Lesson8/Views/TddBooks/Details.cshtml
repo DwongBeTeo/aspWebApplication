@@ -1,0 +1,66 @@
+﻿@model Lesson8.Models.TddBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TddBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TddCategory.TddCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddCategory.TddCategoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TddTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TddAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TddYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TddPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TddPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TddPicture)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TddBookId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

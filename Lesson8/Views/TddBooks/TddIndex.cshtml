@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Lesson8.Models.TddBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "TddCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TddCategory.TddCategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddPublisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddPicture)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddCategory.TddCategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddPublisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddPicture)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TddBookId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TddBookId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TddBookId })
+        </td>
+    </tr>
+}
+
+</table>
