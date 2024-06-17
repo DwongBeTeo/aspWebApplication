@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Lesson9_BaiKiemTraGiuaKi.Models.tddKhoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "TddCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TddTenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TddTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TddTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "TddEdit", new { id=item.TddMaKH }) |
+            @Html.ActionLink("Details", "TddDetails", new { id=item.TddMaKH }) |
+            @Html.ActionLink("Delete", "TddDelete", new { id=item.TddMaKH })
+        </td>
+    </tr>
+}
+
+</table>
